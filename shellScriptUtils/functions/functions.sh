@@ -146,15 +146,6 @@ CheckIfAlreadyRunning()
 	echo $ALREADY_RUNNING
 }
 
-CheckServiceUser()
-{
-if  ! `echo $USER | grep -q "_svcRTC"` ; then
-	echo "The user ${USER} is not a service user."
-	LogTrace "The user ${USER} is not a service user."
-	exit 1
-fi
-}
-
 #############################################
 # Usage: get_property FILE KEY DEFAULT
 function get_property
